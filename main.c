@@ -2,20 +2,24 @@
 
 int main() {
 
-    int n = 3;
+    int n = 9;
     cidade ** city = newCidade(n);
 
     //menu(city, n);
 
     int * visitas = newGrafo(n);
 
-    float ** matriz = newMatrizFloat(n);
+    visitas[0] = 1;
 
-    float ** AGM = newAGM(n);
+    float ** grafo = newMatriz(n);
 
-    mostraMatriz(matriz, n);
+    preenCheMatriz(grafo, n);
 
-    prim(visitas, matriz, AGM, n);
+    float ** AGM = newMatriz(n);
+
+    mostraMatriz(grafo, n);
+
+    prim(visitas, grafo, AGM, n);
 
     mostraMatriz(AGM, n);
 

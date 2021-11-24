@@ -6,8 +6,8 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Arvore Geradora Minima/lib/grafo/Grafo.c
-Grafo.h
+C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Arvore Geradora Minima/lib/cidade/Cidade.h
+../grafo/Grafo.h
 C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Arvore Geradora Minima/lib/grafo/Grafo.h
 
 C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Arvore Geradora Minima/lib/grafo/Grafo.h
@@ -17,4 +17,8 @@ stdlib.h
 -
 string.h
 -
+
+C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Arvore Geradora Minima/main.c
+lib/cidade/Cidade.h
+C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Arvore Geradora Minima/lib/cidade/Cidade.h
 

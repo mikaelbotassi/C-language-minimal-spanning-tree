@@ -11,11 +11,11 @@
 
 int * newGrafo(int n);
 
-float ** newAGM(int n);
+float ** newMatriz(int n);
 
-float ** newMatrizFloat(int n);
+void preenCheMatriz(float **matriz, int n);
 
-int existeVerticeNaoVisitado(int * vertice, int n);
+int existeVerticeNaoVisitado(int * v, int n);
 
 void mostraMatriz(float ** f, int n);
 

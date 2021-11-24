@@ -14,7 +14,7 @@ int * newGrafo(int n){
     return new;
 }
 
-float ** newAGM(int n){
+float ** newMatriz(int n){
     float ** new = malloc(n * sizeof(float));
     for (int i = 0; i < n; ++i) {
         new[i] = malloc(n * sizeof (float));
@@ -29,28 +29,30 @@ float pegaFloat(){
     return ((float)rand()/(float)(RAND_MAX) * 1000);
 }
 
-float ** newMatrizFloat(int n){
-    float ** new = malloc(n * sizeof(float));
+void preenCheMatriz(float **matriz, int n){
     for (int i = 0; i < n; ++i) {
-        new[i] = malloc(n * sizeof (float));
         for(int j = 0; j < n; j++){
             if(i == j){
-                printf(" 0 ");
-                new[i][j] = 0;
+                printf("0 ");
             }
             else{
-                printf("Linha %d", i);
-                //printf("\nDigite um float: ");
-                scanf("%f", &new[i][j]);
+                if(matriz[j][i] != 0){
+                    printf("%.1f ", matriz[j][i]);
+                    matriz[i][j] = matriz[j][i];
+                }
+                else{
+                    //new[i][j] = pegaFloat();
+                    printf("\nDigite um float: ");
+                    scanf("%f", &matriz[i][j]);
+                }
             }
         }
     }
-    return new;
 }
 
-int existeVerticeNaoVisitado(int * vertice, int n){
+int existeVerticeNaoVisitado(int * v, int n){
     for (int i = 0; i < n; ++i) {
-        if(vertice[i] == 0){
+        if(v[i] == 0){
             return 1;
         }
     }
@@ -58,33 +60,39 @@ int existeVerticeNaoVisitado(int * vertice, int n){
 }
 
 void mostraMatriz(float ** f, int n){
+    printf("\n\n\tMATRIZ:\n");
     for (int i = 0; i < n; ++i) {
+        printf("\nLINHA %d", i);
         for(int j = 0; j < n; j++){
-            printf("\n%.2f", f[i][j]);
+            printf("\nCOLUNA %d:", j);
+            printf("%.1f", f[i][j]);
         }
     }
 }
 
 void prim(int * visitado, float ** matrizAdj, float ** agm, int n){
-    float dist = 99999.99;
     int origem, destino;
 
-    for (int orig = 0; orig < n; ++orig) {
-        if(visitado[orig]){
-            for (int dest = 0; dest < n; ++dest) {
-                if(!visitado[dest]){
-                    float current = matrizAdj[orig][dest];
-                    if(current != 0){
-                        if(current < dist){
-                            dist = current;
-                            origem = orig;
-                            destino = dest;
+    while(existeVerticeNaoVisitado(visitado, n)){
+        float dist = 99999;
+        for (int orig = 0; orig < n; orig++) {
+            if(visitado[orig]){
+                for (int dest = 0; dest < n; dest++) {
+                    if(!visitado[dest]){
+                        float current = matrizAdj[orig][dest];
+                        if(current != 0){
+                            if(current < dist){
+                                dist = current;
+                                origem = orig;
+                                destino = dest;
+                            }
                         }
                     }
                 }
             }
+            agm[origem][destino] = dist;
+            agm[destino][origem] = dist;
+            visitado[destino] = 1;
         }
     }
-    agm[origem][destino] = agm[destino][origem] = dist;
-    visitado[destino] = 1;
 }
