@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Arvore Geradora Minima/lib/grafo/Grafo.c
+Grafo.h
+C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Arvore Geradora Minima/lib/grafo/Grafo.h
+
+C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Arvore Geradora Minima/lib/grafo/Grafo.h
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+time.h
+-
+

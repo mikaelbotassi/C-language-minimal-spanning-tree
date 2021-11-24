@@ -1,0 +1,3 @@
+C:\Users\mikae\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\212.5457.51\bin\cmake\win\bin\cmake.exe -E rm -f CMakeFiles\Arvore_Geradora_Minima.dir/objects.a
+C:\Users\mikae\DOWNLO~1\INSTAL~1\MinGW\MINGW8~1.0\mingw64\bin\ar.exe cr CMakeFiles\Arvore_Geradora_Minima.dir/objects.a @CMakeFiles\Arvore_Geradora_Minima.dir\objects1.rsp
+C:\Users\mikae\DOWNLO~1\INSTAL~1\MinGW\MINGW8~1.0\mingw64\bin\gcc.exe -g -Wl,--whole-archive CMakeFiles\Arvore_Geradora_Minima.dir/objects.a -Wl,--no-whole-archive -o Arvore_Geradora_Minima.exe -Wl,--out-implib,libArvore_Geradora_Minima.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Arvore_Geradora_Minima.dir\linklibs.rsp
