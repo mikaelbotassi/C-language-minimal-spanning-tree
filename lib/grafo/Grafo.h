@@ -15,6 +15,10 @@ float ** newAGM(int n);
 
 float ** newMatrizFloat(int n);
 
+int existeVerticeNaoVisitado(int * vertice, int n);
+
 void mostraMatriz(float ** f, int n);
+
+void prim(int * visitado, float ** matrizAdj, float ** agm, int n);
 
 #endif //ARVORE_GERADORA_MINIMA_GRAFO_H
