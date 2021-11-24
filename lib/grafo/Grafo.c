@@ -5,8 +5,9 @@
 #include "Grafo.h"
 
 float pegaFloat();
+char pegaLetra(int i);
 
-int * newGrafo(int n){
+int * newVetor(int n){
     int * new = malloc(n*sizeof (int));
     for(int i = 0; i < n; i++){
         new[i] = 0;
@@ -15,18 +16,18 @@ int * newGrafo(int n){
 }
 
 float ** newMatriz(int n){
-    float ** new = malloc(n * sizeof(float));
+    float ** new = malloc(n * sizeof(float*));
     for (int i = 0; i < n; ++i) {
         new[i] = malloc(n * sizeof (float));
         for(int j = 0; j < n; j++){
-            new[i][j] = 0;
+            new[i][j] = -1; // -1 significa que a esta posição não foi atribuído nenhum valor
         }
     }
     return new;
 }
 
 float pegaFloat(){
-    return ((float)rand()/(float)(RAND_MAX) * 1000);
+    return ((float)rand()/(float)(RAND_MAX) * 10);
 }
 
 void preenCheMatriz(float **matriz, int n){
@@ -34,14 +35,15 @@ void preenCheMatriz(float **matriz, int n){
         for(int j = 0; j < n; j++){
             if(i == j){
                 printf("0 ");
+                matriz[i][j] = 0;
             }
             else{
-                if(matriz[j][i] != 0){
+                if(matriz[j][i] != -1){
                     printf("%.1f ", matriz[j][i]);
                     matriz[i][j] = matriz[j][i];
                 }
                 else{
-                    //new[i][j] = pegaFloat();
+                    //matriz[i][j] = pegaFloat();
                     printf("\nDigite um float: ");
                     scanf("%f", &matriz[i][j]);
                 }
@@ -60,21 +62,29 @@ int existeVerticeNaoVisitado(int * v, int n){
 }
 
 void mostraMatriz(float ** f, int n){
-    printf("\n\n\tMATRIZ:\n");
+    printf("\n\n\tMATRIZ:\n\n");
+    for(int j = 0; j < n; j++){
+        printf("\t  %c ", pegaLetra(j));
+    }
     for (int i = 0; i < n; ++i) {
-        printf("\nLINHA %d", i);
+        printf("\n%c ", pegaLetra(i));
         for(int j = 0; j < n; j++){
-            printf("\nCOLUNA %d:", j);
-            printf("%.1f", f[i][j]);
+            printf("\t%.1f ", f[i][j]);
         }
     }
 }
 
+char pegaLetra(int i){
+    char letras[27];
+    strcpy(letras, "ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+    return letras[i];
+}
+
 void prim(int * visitado, float ** matrizAdj, float ** agm, int n){
     int origem, destino;
-
+    float menor = 999999;
     while(existeVerticeNaoVisitado(visitado, n)){
-        float dist = 99999;
+        float dist = menor;
         for (int orig = 0; orig < n; orig++) {
             if(visitado[orig]){
                 for (int dest = 0; dest < n; dest++) {
@@ -90,9 +100,18 @@ void prim(int * visitado, float ** matrizAdj, float ** agm, int n){
                     }
                 }
             }
-            agm[origem][destino] = dist;
-            agm[destino][origem] = dist;
-            visitado[destino] = 1;
+                /*if(dist == menor){
+                    dist = 0;
+                }*/
+                agm[origem][destino] = agm[destino][origem] = dist;
+                visitado[destino] = 1;
+        }
+    }
+    for (int i = 0; i < n; ++i) {
+        for (int j = 0; j < n; ++j) {
+            if(agm[i][j] == -1  || agm[i][j] == menor){
+                agm[i][j] = 0;
+            }
         }
     }
 }

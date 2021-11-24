@@ -7,7 +7,7 @@ int main() {
 
     //menu(city, n);
 
-    int * visitas = newGrafo(n);
+    int * visitas = newVetor(n);
 
     visitas[0] = 1;
 

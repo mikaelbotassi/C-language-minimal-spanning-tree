@@ -9,7 +9,7 @@
 #ifndef ARVORE_GERADORA_MINIMA_GRAFO_H
 #define ARVORE_GERADORA_MINIMA_GRAFO_H
 
-int * newGrafo(int n);
+int * newVetor(int n);
 
 float ** newMatriz(int n);
 
