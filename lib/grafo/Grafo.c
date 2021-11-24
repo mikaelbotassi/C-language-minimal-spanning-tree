@@ -4,8 +4,6 @@
 
 #include "Grafo.h"
 
-float pegaFLoatAleatorio();
-
 int * newGrafo(int n){
     int * new = malloc(n*sizeof (int));
     for(int i = 0; i < n; i++){
@@ -25,16 +23,12 @@ float ** newAGM(int n){
     return new;
 }
 
-float pegaFLoatAleatorio(){
-    return ((float)rand()/(float)(RAND_MAX) * 1000);
-}
-
 float ** newMatrizFloat(int n){
     float ** new = malloc(n * sizeof(float));
     for (int i = 0; i < n; ++i) {
         new[i] = malloc(n * sizeof (float));
         for(int j = 0; j < n; j++){
-            new[i][j] = pegaFLoatAleatorio();
+            new[i][j] = ((float)rand()/(float)(RAND_MAX) * 1000);
         }
     }
     return new;

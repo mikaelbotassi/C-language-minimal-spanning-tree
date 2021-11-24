@@ -5,7 +5,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <time.h>
 
 #ifndef ARVORE_GERADORA_MINIMA_GRAFO_H
 #define ARVORE_GERADORA_MINIMA_GRAFO_H
