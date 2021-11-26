@@ -17,7 +17,7 @@ void preenCheMatriz(float **matriz, int n);
 
 int existeVerticeNaoVisitado(int * v, int n);
 
-void mostraMatriz(float ** f, int n);
+void mostraMatriz(float ** f, int n, char nome[]);
 
 void prim(int * visitado, float ** matrizAdj, float ** agm, int n);
 

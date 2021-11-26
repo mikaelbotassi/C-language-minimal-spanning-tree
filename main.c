@@ -1,27 +1,27 @@
 #include "lib/cidade/Cidade.h"
-
+#define println printf("\n");
+#define TAMANHO_ENTRADA 9
 int main() {
 
-    int n = 9;
-    cidade ** city = newCidade(n);
+    setvbuf(stdout, NULL, _IONBF, 0);
+//================Estruturas==============================
+    cidade ** city = newCidade(TAMANHO_ENTRADA);
+    int * visitas = newVetor(TAMANHO_ENTRADA);
+    float ** matrizAdj = newMatriz(TAMANHO_ENTRADA);
+    float ** AGM = newMatriz(TAMANHO_ENTRADA);
+    visitas[0] = 1;//Começarei a percorrer os vértices pelo vértice 0;
+    // Para isso eu atribuo 1 para ele como um visitado
+//========================================================
 
-    //menu(city, n);
+    //menu(city, TAMANHO_ENTRADA);
 
-    int * visitas = newVetor(n);
+    preenCheMatriz(matrizAdj, TAMANHO_ENTRADA);//Atribui valores à matriz;
 
-    visitas[0] = 1;
+    prim(visitas, matrizAdj, AGM, TAMANHO_ENTRADA); // Usa o algoritmo de prim baseado na matriz adjacente;
 
-    float ** grafo = newMatriz(n);
-
-    preenCheMatriz(grafo, n);
-
-    float ** AGM = newMatriz(n);
-
-    mostraMatriz(grafo, n);
-
-    prim(visitas, grafo, AGM, n);
-
-    mostraMatriz(AGM, n);
+    mostraMatriz(matrizAdj, TAMANHO_ENTRADA, "MATRIZ ADJACENTE");
+    println;
+    mostraMatriz(AGM, TAMANHO_ENTRADA, "ARVORE GERADORA MINIMA");
 
     return 0;
 }

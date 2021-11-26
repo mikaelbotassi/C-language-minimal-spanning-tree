@@ -4,6 +4,8 @@
 
 #include "Grafo.h"
 
+#define maior 99999
+
 float pegaFloat();
 char pegaLetra(int i);
 
@@ -34,7 +36,7 @@ void preenCheMatriz(float **matriz, int n){
     for (int i = 0; i < n; ++i) {
         for(int j = 0; j < n; j++){
             if(i == j){
-                printf("0 ");
+                printf("0.0 ");
                 matriz[i][j] = 0;
             }
             else{
@@ -61,30 +63,24 @@ int existeVerticeNaoVisitado(int * v, int n){
     return 0;
 }
 
-void mostraMatriz(float ** f, int n){
-    printf("\n\n\tMATRIZ:\n\n");
+void mostraMatriz(float ** f, int n, char nome[]){
+    int caractere = 65; // Para pegar a letra que condiz com a coluna
+    printf("\n\n\t%s\n\n", nome);
     for(int j = 0; j < n; j++){
-        printf("\t  %c ", pegaLetra(j));
+        printf("\t  %c ", caractere + j);
     }
     for (int i = 0; i < n; ++i) {
-        printf("\n%c ", pegaLetra(i));
+        printf("\n%c ", caractere + i);
         for(int j = 0; j < n; j++){
             printf("\t%.1f ", f[i][j]);
         }
     }
 }
 
-char pegaLetra(int i){
-    char letras[27];
-    strcpy(letras, "ABCDEFGHIJKLMNOPQRSTUVWXYZ");
-    return letras[i];
-}
-
 void prim(int * visitado, float ** matrizAdj, float ** agm, int n){
     int origem, destino;
-    float menor = 999999;
     while(existeVerticeNaoVisitado(visitado, n)){
-        float dist = menor;
+        float dist = maior;
         for (int orig = 0; orig < n; orig++) {
             if(visitado[orig]){
                 for (int dest = 0; dest < n; dest++) {
@@ -100,16 +96,13 @@ void prim(int * visitado, float ** matrizAdj, float ** agm, int n){
                     }
                 }
             }
-                /*if(dist == menor){
-                    dist = 0;
-                }*/
-                agm[origem][destino] = agm[destino][origem] = dist;
-                visitado[destino] = 1;
         }
+        agm[origem][destino] = agm[destino][origem] = dist;
+        visitado[destino] = 1;
     }
     for (int i = 0; i < n; ++i) {
         for (int j = 0; j < n; ++j) {
-            if(agm[i][j] == -1  || agm[i][j] == menor){
+            if((agm[i][j] == -1)  || (agm[i][j] == maior)){
                 agm[i][j] = 0;
             }
         }
