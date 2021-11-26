@@ -104,11 +104,39 @@ CMakeFiles/Arvore_Geradora_Minima.dir/lib/cidade/Cidade.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Arvore_Geradora_Minima.dir/lib/cidade/Cidade.c.s"
 	C:\Users\mikae\DOWNLO~1\INSTAL~1\MinGW\MINGW8~1.0\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\mikae\Desktop\IFES\Faculdade\4 periodo\TPA\Arvore Geradora Minima\lib\cidade\Cidade.c" -o CMakeFiles\Arvore_Geradora_Minima.dir\lib\cidade\Cidade.c.s
 
+CMakeFiles/Arvore_Geradora_Minima.dir/services/leitorArquivo/LeitorArquivo.c.obj: CMakeFiles/Arvore_Geradora_Minima.dir/flags.make
+CMakeFiles/Arvore_Geradora_Minima.dir/services/leitorArquivo/LeitorArquivo.c.obj: ../services/leitorArquivo/LeitorArquivo.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\mikae\Desktop\IFES\Faculdade\4 periodo\TPA\Arvore Geradora Minima\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/Arvore_Geradora_Minima.dir/services/leitorArquivo/LeitorArquivo.c.obj"
+	C:\Users\mikae\DOWNLO~1\INSTAL~1\MinGW\MINGW8~1.0\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Arvore_Geradora_Minima.dir\services\leitorArquivo\LeitorArquivo.c.obj -c "C:\Users\mikae\Desktop\IFES\Faculdade\4 periodo\TPA\Arvore Geradora Minima\services\leitorArquivo\LeitorArquivo.c"
+
+CMakeFiles/Arvore_Geradora_Minima.dir/services/leitorArquivo/LeitorArquivo.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Arvore_Geradora_Minima.dir/services/leitorArquivo/LeitorArquivo.c.i"
+	C:\Users\mikae\DOWNLO~1\INSTAL~1\MinGW\MINGW8~1.0\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\mikae\Desktop\IFES\Faculdade\4 periodo\TPA\Arvore Geradora Minima\services\leitorArquivo\LeitorArquivo.c" > CMakeFiles\Arvore_Geradora_Minima.dir\services\leitorArquivo\LeitorArquivo.c.i
+
+CMakeFiles/Arvore_Geradora_Minima.dir/services/leitorArquivo/LeitorArquivo.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Arvore_Geradora_Minima.dir/services/leitorArquivo/LeitorArquivo.c.s"
+	C:\Users\mikae\DOWNLO~1\INSTAL~1\MinGW\MINGW8~1.0\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\mikae\Desktop\IFES\Faculdade\4 periodo\TPA\Arvore Geradora Minima\services\leitorArquivo\LeitorArquivo.c" -o CMakeFiles\Arvore_Geradora_Minima.dir\services\leitorArquivo\LeitorArquivo.c.s
+
+CMakeFiles/Arvore_Geradora_Minima.dir/services/geradorArquivo/GeradorArquivo.c.obj: CMakeFiles/Arvore_Geradora_Minima.dir/flags.make
+CMakeFiles/Arvore_Geradora_Minima.dir/services/geradorArquivo/GeradorArquivo.c.obj: ../services/geradorArquivo/GeradorArquivo.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\mikae\Desktop\IFES\Faculdade\4 periodo\TPA\Arvore Geradora Minima\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/Arvore_Geradora_Minima.dir/services/geradorArquivo/GeradorArquivo.c.obj"
+	C:\Users\mikae\DOWNLO~1\INSTAL~1\MinGW\MINGW8~1.0\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Arvore_Geradora_Minima.dir\services\geradorArquivo\GeradorArquivo.c.obj -c "C:\Users\mikae\Desktop\IFES\Faculdade\4 periodo\TPA\Arvore Geradora Minima\services\geradorArquivo\GeradorArquivo.c"
+
+CMakeFiles/Arvore_Geradora_Minima.dir/services/geradorArquivo/GeradorArquivo.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Arvore_Geradora_Minima.dir/services/geradorArquivo/GeradorArquivo.c.i"
+	C:\Users\mikae\DOWNLO~1\INSTAL~1\MinGW\MINGW8~1.0\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\mikae\Desktop\IFES\Faculdade\4 periodo\TPA\Arvore Geradora Minima\services\geradorArquivo\GeradorArquivo.c" > CMakeFiles\Arvore_Geradora_Minima.dir\services\geradorArquivo\GeradorArquivo.c.i
+
+CMakeFiles/Arvore_Geradora_Minima.dir/services/geradorArquivo/GeradorArquivo.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Arvore_Geradora_Minima.dir/services/geradorArquivo/GeradorArquivo.c.s"
+	C:\Users\mikae\DOWNLO~1\INSTAL~1\MinGW\MINGW8~1.0\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\mikae\Desktop\IFES\Faculdade\4 periodo\TPA\Arvore Geradora Minima\services\geradorArquivo\GeradorArquivo.c" -o CMakeFiles\Arvore_Geradora_Minima.dir\services\geradorArquivo\GeradorArquivo.c.s
+
 # Object files for target Arvore_Geradora_Minima
 Arvore_Geradora_Minima_OBJECTS = \
 "CMakeFiles/Arvore_Geradora_Minima.dir/main.c.obj" \
 "CMakeFiles/Arvore_Geradora_Minima.dir/lib/grafo/Grafo.c.obj" \
-"CMakeFiles/Arvore_Geradora_Minima.dir/lib/cidade/Cidade.c.obj"
+"CMakeFiles/Arvore_Geradora_Minima.dir/lib/cidade/Cidade.c.obj" \
+"CMakeFiles/Arvore_Geradora_Minima.dir/services/leitorArquivo/LeitorArquivo.c.obj" \
+"CMakeFiles/Arvore_Geradora_Minima.dir/services/geradorArquivo/GeradorArquivo.c.obj"
 
 # External object files for target Arvore_Geradora_Minima
 Arvore_Geradora_Minima_EXTERNAL_OBJECTS =
@@ -116,11 +144,13 @@ Arvore_Geradora_Minima_EXTERNAL_OBJECTS =
 Arvore_Geradora_Minima.exe: CMakeFiles/Arvore_Geradora_Minima.dir/main.c.obj
 Arvore_Geradora_Minima.exe: CMakeFiles/Arvore_Geradora_Minima.dir/lib/grafo/Grafo.c.obj
 Arvore_Geradora_Minima.exe: CMakeFiles/Arvore_Geradora_Minima.dir/lib/cidade/Cidade.c.obj
+Arvore_Geradora_Minima.exe: CMakeFiles/Arvore_Geradora_Minima.dir/services/leitorArquivo/LeitorArquivo.c.obj
+Arvore_Geradora_Minima.exe: CMakeFiles/Arvore_Geradora_Minima.dir/services/geradorArquivo/GeradorArquivo.c.obj
 Arvore_Geradora_Minima.exe: CMakeFiles/Arvore_Geradora_Minima.dir/build.make
 Arvore_Geradora_Minima.exe: CMakeFiles/Arvore_Geradora_Minima.dir/linklibs.rsp
 Arvore_Geradora_Minima.exe: CMakeFiles/Arvore_Geradora_Minima.dir/objects1.rsp
 Arvore_Geradora_Minima.exe: CMakeFiles/Arvore_Geradora_Minima.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\mikae\Desktop\IFES\Faculdade\4 periodo\TPA\Arvore Geradora Minima\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Linking C executable Arvore_Geradora_Minima.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\mikae\Desktop\IFES\Faculdade\4 periodo\TPA\Arvore Geradora Minima\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable Arvore_Geradora_Minima.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Arvore_Geradora_Minima.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

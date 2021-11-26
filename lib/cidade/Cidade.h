@@ -7,14 +7,19 @@
 #ifndef ARVORE_GERADORA_MINIMA_CIDADE_H
 #define ARVORE_GERADORA_MINIMA_CIDADE_H
 
+#define TAM_NOME 11 //Define o tamanho máximo de caracteres para guardar
+// o nome da cidade e para escrever o arquivo
+
 typedef struct Cidade{
     int cod;
-    char nome[31];
+    char * nome;
 }cidade;
 
 void menu(cidade **c, int n);
 
-cidade ** newCidade(int n);
+cidade * newCidade();
+
+cidade ** newVetorCidade(int n);
 
 cidade * cidadeInfo();
 

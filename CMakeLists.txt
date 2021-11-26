@@ -3,4 +3,4 @@ project(Arvore_Geradora_Minima C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(Arvore_Geradora_Minima main.c lib/grafo/Grafo.c lib/cidade/Cidade.c)
+add_executable(Arvore_Geradora_Minima main.c lib/grafo/Grafo.c lib/cidade/Cidade.c services/leitorArquivo/LeitorArquivo.c services/geradorArquivo/GeradorArquivo.c)

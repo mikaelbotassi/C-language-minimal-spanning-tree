@@ -19,6 +19,22 @@ string.h
 -
 
 C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Arvore Geradora Minima/main.c
-lib/cidade/Cidade.h
+services/geradorArquivo/GeradorArquivo.h
+C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Arvore Geradora Minima/services/geradorArquivo/GeradorArquivo.h
+
+C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Arvore Geradora Minima/services/geradorArquivo/GeradorArquivo.c
+GeradorArquivo.h
+C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Arvore Geradora Minima/services/geradorArquivo/GeradorArquivo.h
+stdio.h
+-
+stdlib.h
+-
+time.h
+-
+string.h
+-
+
+C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Arvore Geradora Minima/services/geradorArquivo/GeradorArquivo.h
+../../lib/cidade/Cidade.h
 C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Arvore Geradora Minima/lib/cidade/Cidade.h
 

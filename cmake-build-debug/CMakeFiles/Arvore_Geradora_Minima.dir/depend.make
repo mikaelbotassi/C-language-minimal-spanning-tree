@@ -11,4 +11,13 @@ CMakeFiles/Arvore_Geradora_Minima.dir/lib/grafo/Grafo.c.obj: \
 CMakeFiles/Arvore_Geradora_Minima.dir/main.c.obj: \
  ../lib/cidade/Cidade.h \
  ../lib/grafo/Grafo.h \
- ../main.c
+ ../main.c \
+ ../services/geradorArquivo/GeradorArquivo.h
+CMakeFiles/Arvore_Geradora_Minima.dir/services/geradorArquivo/GeradorArquivo.c.obj: \
+ ../lib/cidade/Cidade.h \
+ ../lib/grafo/Grafo.h \
+ ../services/geradorArquivo/GeradorArquivo.c \
+ ../services/geradorArquivo/GeradorArquivo.h
+CMakeFiles/Arvore_Geradora_Minima.dir/services/leitorArquivo/LeitorArquivo.c.obj: \
+ ../services/leitorArquivo/LeitorArquivo.c \
+ ../services/leitorArquivo/LeitorArquivo.h

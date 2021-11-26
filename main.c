@@ -1,11 +1,16 @@
-#include "lib/cidade/Cidade.h"
+//#include "lib/cidade/Cidade.h"
+#include "services/geradorArquivo/GeradorArquivo.h"
 #define println printf("\n");
 #define TAMANHO_ENTRADA 9
+
 int main() {
 
     setvbuf(stdout, NULL, _IONBF, 0);
+
+    criaArquivo();
+
 //================Estruturas==============================
-    cidade ** city = newCidade(TAMANHO_ENTRADA);
+    cidade ** city = newVetorCidade(TAMANHO_ENTRADA);
     int * visitas = newVetor(TAMANHO_ENTRADA);
     float ** matrizAdj = newMatriz(TAMANHO_ENTRADA);
     float ** AGM = newMatriz(TAMANHO_ENTRADA);

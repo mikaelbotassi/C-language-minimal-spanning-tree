@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Arvore_Geradora_Minima.dir/lib/cidade/Cidade.c.obj"
   "CMakeFiles/Arvore_Geradora_Minima.dir/lib/grafo/Grafo.c.obj"
   "CMakeFiles/Arvore_Geradora_Minima.dir/main.c.obj"
+  "CMakeFiles/Arvore_Geradora_Minima.dir/services/geradorArquivo/GeradorArquivo.c.obj"
+  "CMakeFiles/Arvore_Geradora_Minima.dir/services/leitorArquivo/LeitorArquivo.c.obj"
   "libArvore_Geradora_Minima.dll.a"
 )
 

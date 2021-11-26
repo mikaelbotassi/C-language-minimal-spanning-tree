@@ -200,6 +200,54 @@ main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Arvore_Geradora_Minima.dir\build.make CMakeFiles/Arvore_Geradora_Minima.dir/main.c.s
 .PHONY : main.c.s
 
+services/geradorArquivo/GeradorArquivo.obj: services/geradorArquivo/GeradorArquivo.c.obj
+.PHONY : services/geradorArquivo/GeradorArquivo.obj
+
+# target to build an object file
+services/geradorArquivo/GeradorArquivo.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Arvore_Geradora_Minima.dir\build.make CMakeFiles/Arvore_Geradora_Minima.dir/services/geradorArquivo/GeradorArquivo.c.obj
+.PHONY : services/geradorArquivo/GeradorArquivo.c.obj
+
+services/geradorArquivo/GeradorArquivo.i: services/geradorArquivo/GeradorArquivo.c.i
+.PHONY : services/geradorArquivo/GeradorArquivo.i
+
+# target to preprocess a source file
+services/geradorArquivo/GeradorArquivo.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Arvore_Geradora_Minima.dir\build.make CMakeFiles/Arvore_Geradora_Minima.dir/services/geradorArquivo/GeradorArquivo.c.i
+.PHONY : services/geradorArquivo/GeradorArquivo.c.i
+
+services/geradorArquivo/GeradorArquivo.s: services/geradorArquivo/GeradorArquivo.c.s
+.PHONY : services/geradorArquivo/GeradorArquivo.s
+
+# target to generate assembly for a file
+services/geradorArquivo/GeradorArquivo.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Arvore_Geradora_Minima.dir\build.make CMakeFiles/Arvore_Geradora_Minima.dir/services/geradorArquivo/GeradorArquivo.c.s
+.PHONY : services/geradorArquivo/GeradorArquivo.c.s
+
+services/leitorArquivo/LeitorArquivo.obj: services/leitorArquivo/LeitorArquivo.c.obj
+.PHONY : services/leitorArquivo/LeitorArquivo.obj
+
+# target to build an object file
+services/leitorArquivo/LeitorArquivo.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Arvore_Geradora_Minima.dir\build.make CMakeFiles/Arvore_Geradora_Minima.dir/services/leitorArquivo/LeitorArquivo.c.obj
+.PHONY : services/leitorArquivo/LeitorArquivo.c.obj
+
+services/leitorArquivo/LeitorArquivo.i: services/leitorArquivo/LeitorArquivo.c.i
+.PHONY : services/leitorArquivo/LeitorArquivo.i
+
+# target to preprocess a source file
+services/leitorArquivo/LeitorArquivo.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Arvore_Geradora_Minima.dir\build.make CMakeFiles/Arvore_Geradora_Minima.dir/services/leitorArquivo/LeitorArquivo.c.i
+.PHONY : services/leitorArquivo/LeitorArquivo.c.i
+
+services/leitorArquivo/LeitorArquivo.s: services/leitorArquivo/LeitorArquivo.c.s
+.PHONY : services/leitorArquivo/LeitorArquivo.s
+
+# target to generate assembly for a file
+services/leitorArquivo/LeitorArquivo.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Arvore_Geradora_Minima.dir\build.make CMakeFiles/Arvore_Geradora_Minima.dir/services/leitorArquivo/LeitorArquivo.c.s
+.PHONY : services/leitorArquivo/LeitorArquivo.c.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -218,6 +266,12 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... services/geradorArquivo/GeradorArquivo.obj
+	@echo ... services/geradorArquivo/GeradorArquivo.i
+	@echo ... services/geradorArquivo/GeradorArquivo.s
+	@echo ... services/leitorArquivo/LeitorArquivo.obj
+	@echo ... services/leitorArquivo/LeitorArquivo.i
+	@echo ... services/leitorArquivo/LeitorArquivo.s
 .PHONY : help
 
 

@@ -30,7 +30,7 @@ void menu(cidade **c, int n){
     }while(res != 0);
 }
 
-cidade ** newCidade(int n){
+cidade ** newVetorCidade(int n){
     cidade ** c = malloc(n * sizeof(cidade *));
     for(int i = 0; i < n; i++){
         c[i] = NULL;
@@ -38,8 +38,15 @@ cidade ** newCidade(int n){
     return c;
 }
 
-cidade * cidadeInfo(){
+cidade * newCidade(){
     cidade * c = malloc(sizeof (cidade));
+    c->cod = 0;
+    c->nome = malloc(TAM_NOME * sizeof (char));
+    return c;
+}
+
+cidade * cidadeInfo(){
+    cidade * c = newCidade();
     printf("Digite o codigo da cidade: ");
     scanf("%d", &c->cod);
     printf("Digite o nome da cidade: ");
