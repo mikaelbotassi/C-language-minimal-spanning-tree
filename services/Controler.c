@@ -7,6 +7,7 @@
 grafo * services(int * tamEntrada){
     grafo * g = NULL;
     int res;
+    char criarArquivo;
     printf("\n\n\t\tOLA! NESTE PROGRAMA VOCE TEM OPCOES!\n\t\tVOCE PODE:\n\n");
     printf("1 - LER ARQUIVOS DE ENTRADA(PARA SEGUIR A ORIENTACAO DO TRABALHO DE"
            "'TPA' POR FAVOR SIGA ESTA OPCAO)\n");
@@ -19,6 +20,12 @@ grafo * services(int * tamEntrada){
         case 0:
             break;
         case 1:
+            printf("DESEJA CRIAR UM NOVO ARQUIVO ALEATORIO?\nDIGITE 's'"
+                   "para sim e 'n' PARA NAO: ");
+            scanf(" %c", &criarArquivo);
+            if(criarArquivo == 's' || criarArquivo == 'S'){
+              criaArquivo(); //Cria o arquivo de entrada
+            }
             g = readGrafoFromFile(tamEntrada);
             g->visitados[0] = 1; //Começarei a percorrer os vértices pelo vértice 0;
             // Para isso eu atribuo 1 para ele como um visitado

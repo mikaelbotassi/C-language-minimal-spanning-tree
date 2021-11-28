@@ -7,8 +7,6 @@ int main() {
 
     int tamEntrada;
 
-    criaArquivo(); //Cria o arquivo de entrada
-
 //================Estruturas==============================
     grafo * g = services(&tamEntrada);
 //========================================================
