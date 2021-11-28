@@ -4,10 +4,19 @@
 
 #include "Grafo.h"
 
-#define maior 99999
+#define MAIOR 99999
 
 float pegaFloat();
 char pegaLetra(int i);
+
+grafo * newGrafo(int tamEntrada){
+    grafo * g = malloc(sizeof (grafo));
+    g->cidades = newVetorCidade(tamEntrada);
+    g->visitados = newVetor(tamEntrada);
+    g->matrizAdj = newMatriz(tamEntrada);
+    g->AGM = newMatriz(tamEntrada);
+    return g;
+}
 
 int * newVetor(int n){
     int * new = malloc(n*sizeof (int));
@@ -32,7 +41,7 @@ float pegaFloat(){
     return ((float)rand()/(float)(RAND_MAX) * 10);
 }
 
-void preenCheMatriz(float **matriz, int n){
+void preenCheMatriz(float **matriz, int n, int type){
     for (int i = 0; i < n; ++i) {
         for(int j = 0; j < n; j++){
             if(i == j){
@@ -45,9 +54,13 @@ void preenCheMatriz(float **matriz, int n){
                     matriz[i][j] = matriz[j][i];
                 }
                 else{
-                    //matriz[i][j] = pegaFloat();
-                    printf("\nDigite um float: ");
-                    scanf("%f", &matriz[i][j]);
+                    if(type == 1){ // Se for 1 insere manualmente as distancias
+                        printf("\nDigite um float: ");
+                        scanf("%f", &matriz[i][j]);
+                    }
+                    else{ //Se for 2 insere automaticamente de maneira aleatória
+                        matriz[i][j] = pegaFloat();
+                    }
                 }
             }
         }
@@ -77,15 +90,15 @@ void mostraMatriz(float ** f, int n, char nome[]){
     }
 }
 
-void prim(int * visitado, float ** matrizAdj, float ** agm, int n){
+void prim(grafo * g, int n){
     int origem, destino;
-    while(existeVerticeNaoVisitado(visitado, n)){
-        float dist = maior;
+    while(existeVerticeNaoVisitado(g->visitados, n)){
+        float dist = MAIOR;
         for (int orig = 0; orig < n; orig++) {
-            if(visitado[orig]){
+            if(g->visitados[orig]){
                 for (int dest = 0; dest < n; dest++) {
-                    if(!visitado[dest]){
-                        float current = matrizAdj[orig][dest];
+                    if(!g->visitados[dest]){
+                        float current = g->matrizAdj[orig][dest];
                         if(current != 0){
                             if(current < dist){
                                 dist = current;
@@ -97,13 +110,13 @@ void prim(int * visitado, float ** matrizAdj, float ** agm, int n){
                 }
             }
         }
-        agm[origem][destino] = agm[destino][origem] = dist;
-        visitado[destino] = 1;
+        g->AGM[origem][destino] = g->AGM[destino][origem] = dist;
+        g->visitados[destino] = 1;
     }
     for (int i = 0; i < n; ++i) {
         for (int j = 0; j < n; ++j) {
-            if((agm[i][j] == -1)  || (agm[i][j] == maior)){
-                agm[i][j] = 0;
+            if((g->AGM[i][j] == -1)  || (g->AGM[i][j] == MAIOR)){
+                g->AGM[i][j] = 0;
             }
         }
     }

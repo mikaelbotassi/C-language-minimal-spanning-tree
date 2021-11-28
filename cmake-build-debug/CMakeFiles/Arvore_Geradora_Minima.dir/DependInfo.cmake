@@ -11,8 +11,9 @@ set(CMAKE_DEPENDS_CHECK_C
   "C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Arvore Geradora Minima/lib/cidade/Cidade.c" "C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Arvore Geradora Minima/cmake-build-debug/CMakeFiles/Arvore_Geradora_Minima.dir/lib/cidade/Cidade.c.obj"
   "C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Arvore Geradora Minima/lib/grafo/Grafo.c" "C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Arvore Geradora Minima/cmake-build-debug/CMakeFiles/Arvore_Geradora_Minima.dir/lib/grafo/Grafo.c.obj"
   "C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Arvore Geradora Minima/main.c" "C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Arvore Geradora Minima/cmake-build-debug/CMakeFiles/Arvore_Geradora_Minima.dir/main.c.obj"
+  "C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Arvore Geradora Minima/services/Controler.c" "C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Arvore Geradora Minima/cmake-build-debug/CMakeFiles/Arvore_Geradora_Minima.dir/services/Controler.c.obj"
+  "C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Arvore Geradora Minima/services/controleEntradaSaida/ControleArquivo.c" "C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Arvore Geradora Minima/cmake-build-debug/CMakeFiles/Arvore_Geradora_Minima.dir/services/controleEntradaSaida/ControleArquivo.c.obj"
   "C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Arvore Geradora Minima/services/geradorArquivo/GeradorArquivo.c" "C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Arvore Geradora Minima/cmake-build-debug/CMakeFiles/Arvore_Geradora_Minima.dir/services/geradorArquivo/GeradorArquivo.c.obj"
-  "C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Arvore Geradora Minima/services/leitorArquivo/LeitorArquivo.c" "C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Arvore Geradora Minima/cmake-build-debug/CMakeFiles/Arvore_Geradora_Minima.dir/services/leitorArquivo/LeitorArquivo.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

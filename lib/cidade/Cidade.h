@@ -2,7 +2,10 @@
 // Created by mikae on 23/11/2021.
 //
 
-#include "../grafo/Grafo.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <string.h>
 
 #ifndef ARVORE_GERADORA_MINIMA_CIDADE_H
 #define ARVORE_GERADORA_MINIMA_CIDADE_H
@@ -11,7 +14,6 @@
 // o nome da cidade e para escrever o arquivo
 
 typedef struct Cidade{
-    int cod;
     char * nome;
 }cidade;
 
@@ -23,7 +25,7 @@ cidade ** newVetorCidade(int n);
 
 cidade * cidadeInfo();
 
-cidade ** insereCidade(cidade ** c, cidade * new, int n);
+void insereCidade(cidade ** c, cidade * new, int n);
 
 void mostrarCidade(cidade ** c, int n);
 

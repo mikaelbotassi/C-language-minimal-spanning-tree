@@ -3,21 +3,32 @@
 
 CMakeFiles/Arvore_Geradora_Minima.dir/lib/cidade/Cidade.c.obj: \
  ../lib/cidade/Cidade.c \
- ../lib/cidade/Cidade.h \
- ../lib/grafo/Grafo.h
+ ../lib/cidade/Cidade.h
 CMakeFiles/Arvore_Geradora_Minima.dir/lib/grafo/Grafo.c.obj: \
+ ../lib/cidade/Cidade.h \
  ../lib/grafo/Grafo.c \
  ../lib/grafo/Grafo.h
 CMakeFiles/Arvore_Geradora_Minima.dir/main.c.obj: \
  ../lib/cidade/Cidade.h \
  ../lib/grafo/Grafo.h \
  ../main.c \
+ ../services/Controler.h \
+ ../services/controleEntradaSaida/HeaderUtils/ControleArquivo.h \
  ../services/geradorArquivo/GeradorArquivo.h
+CMakeFiles/Arvore_Geradora_Minima.dir/services/Controler.c.obj: \
+ ../lib/cidade/Cidade.h \
+ ../lib/grafo/Grafo.h \
+ ../services/Controler.c \
+ ../services/Controler.h \
+ ../services/controleEntradaSaida/HeaderUtils/ControleArquivo.h \
+ ../services/geradorArquivo/GeradorArquivo.h
+CMakeFiles/Arvore_Geradora_Minima.dir/services/controleEntradaSaida/ControleArquivo.c.obj: \
+ ../lib/cidade/Cidade.h \
+ ../lib/grafo/Grafo.h \
+ ../services/controleEntradaSaida/ControleArquivo.c \
+ ../services/controleEntradaSaida/HeaderUtils/ControleArquivo.h
 CMakeFiles/Arvore_Geradora_Minima.dir/services/geradorArquivo/GeradorArquivo.c.obj: \
  ../lib/cidade/Cidade.h \
  ../lib/grafo/Grafo.h \
  ../services/geradorArquivo/GeradorArquivo.c \
  ../services/geradorArquivo/GeradorArquivo.h
-CMakeFiles/Arvore_Geradora_Minima.dir/services/leitorArquivo/LeitorArquivo.c.obj: \
- ../services/leitorArquivo/LeitorArquivo.c \
- ../services/leitorArquivo/LeitorArquivo.h

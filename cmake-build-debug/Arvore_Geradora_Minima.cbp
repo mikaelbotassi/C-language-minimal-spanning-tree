@@ -89,16 +89,19 @@
 		<Unit filename="C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Arvore Geradora Minima/main.c">
 			<Option target="Arvore_Geradora_Minima"/>
 		</Unit>
+		<Unit filename="C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Arvore Geradora Minima/services/Controler.c">
+			<Option target="Arvore_Geradora_Minima"/>
+		</Unit>
+		<Unit filename="C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Arvore Geradora Minima/services/Controler.h">
+			<Option target="Arvore_Geradora_Minima"/>
+		</Unit>
+		<Unit filename="C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Arvore Geradora Minima/services/controleEntradaSaida/ControleArquivo.c">
+			<Option target="Arvore_Geradora_Minima"/>
+		</Unit>
 		<Unit filename="C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Arvore Geradora Minima/services/geradorArquivo/GeradorArquivo.c">
 			<Option target="Arvore_Geradora_Minima"/>
 		</Unit>
 		<Unit filename="C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Arvore Geradora Minima/services/geradorArquivo/GeradorArquivo.h">
-			<Option target="Arvore_Geradora_Minima"/>
-		</Unit>
-		<Unit filename="C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Arvore Geradora Minima/services/leitorArquivo/LeitorArquivo.c">
-			<Option target="Arvore_Geradora_Minima"/>
-		</Unit>
-		<Unit filename="C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Arvore Geradora Minima/services/leitorArquivo/LeitorArquivo.h">
 			<Option target="Arvore_Geradora_Minima"/>
 		</Unit>
 		<Unit filename="C:/Users/mikae/Desktop/IFES/Faculdade/4 periodo/TPA/Arvore Geradora Minima/CMakeLists.txt">

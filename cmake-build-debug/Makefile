@@ -200,6 +200,54 @@ main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Arvore_Geradora_Minima.dir\build.make CMakeFiles/Arvore_Geradora_Minima.dir/main.c.s
 .PHONY : main.c.s
 
+services/Controler.obj: services/Controler.c.obj
+.PHONY : services/Controler.obj
+
+# target to build an object file
+services/Controler.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Arvore_Geradora_Minima.dir\build.make CMakeFiles/Arvore_Geradora_Minima.dir/services/Controler.c.obj
+.PHONY : services/Controler.c.obj
+
+services/Controler.i: services/Controler.c.i
+.PHONY : services/Controler.i
+
+# target to preprocess a source file
+services/Controler.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Arvore_Geradora_Minima.dir\build.make CMakeFiles/Arvore_Geradora_Minima.dir/services/Controler.c.i
+.PHONY : services/Controler.c.i
+
+services/Controler.s: services/Controler.c.s
+.PHONY : services/Controler.s
+
+# target to generate assembly for a file
+services/Controler.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Arvore_Geradora_Minima.dir\build.make CMakeFiles/Arvore_Geradora_Minima.dir/services/Controler.c.s
+.PHONY : services/Controler.c.s
+
+services/controleEntradaSaida/ControleArquivo.obj: services/controleEntradaSaida/ControleArquivo.c.obj
+.PHONY : services/controleEntradaSaida/ControleArquivo.obj
+
+# target to build an object file
+services/controleEntradaSaida/ControleArquivo.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Arvore_Geradora_Minima.dir\build.make CMakeFiles/Arvore_Geradora_Minima.dir/services/controleEntradaSaida/ControleArquivo.c.obj
+.PHONY : services/controleEntradaSaida/ControleArquivo.c.obj
+
+services/controleEntradaSaida/ControleArquivo.i: services/controleEntradaSaida/ControleArquivo.c.i
+.PHONY : services/controleEntradaSaida/ControleArquivo.i
+
+# target to preprocess a source file
+services/controleEntradaSaida/ControleArquivo.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Arvore_Geradora_Minima.dir\build.make CMakeFiles/Arvore_Geradora_Minima.dir/services/controleEntradaSaida/ControleArquivo.c.i
+.PHONY : services/controleEntradaSaida/ControleArquivo.c.i
+
+services/controleEntradaSaida/ControleArquivo.s: services/controleEntradaSaida/ControleArquivo.c.s
+.PHONY : services/controleEntradaSaida/ControleArquivo.s
+
+# target to generate assembly for a file
+services/controleEntradaSaida/ControleArquivo.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Arvore_Geradora_Minima.dir\build.make CMakeFiles/Arvore_Geradora_Minima.dir/services/controleEntradaSaida/ControleArquivo.c.s
+.PHONY : services/controleEntradaSaida/ControleArquivo.c.s
+
 services/geradorArquivo/GeradorArquivo.obj: services/geradorArquivo/GeradorArquivo.c.obj
 .PHONY : services/geradorArquivo/GeradorArquivo.obj
 
@@ -224,30 +272,6 @@ services/geradorArquivo/GeradorArquivo.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Arvore_Geradora_Minima.dir\build.make CMakeFiles/Arvore_Geradora_Minima.dir/services/geradorArquivo/GeradorArquivo.c.s
 .PHONY : services/geradorArquivo/GeradorArquivo.c.s
 
-services/leitorArquivo/LeitorArquivo.obj: services/leitorArquivo/LeitorArquivo.c.obj
-.PHONY : services/leitorArquivo/LeitorArquivo.obj
-
-# target to build an object file
-services/leitorArquivo/LeitorArquivo.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Arvore_Geradora_Minima.dir\build.make CMakeFiles/Arvore_Geradora_Minima.dir/services/leitorArquivo/LeitorArquivo.c.obj
-.PHONY : services/leitorArquivo/LeitorArquivo.c.obj
-
-services/leitorArquivo/LeitorArquivo.i: services/leitorArquivo/LeitorArquivo.c.i
-.PHONY : services/leitorArquivo/LeitorArquivo.i
-
-# target to preprocess a source file
-services/leitorArquivo/LeitorArquivo.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Arvore_Geradora_Minima.dir\build.make CMakeFiles/Arvore_Geradora_Minima.dir/services/leitorArquivo/LeitorArquivo.c.i
-.PHONY : services/leitorArquivo/LeitorArquivo.c.i
-
-services/leitorArquivo/LeitorArquivo.s: services/leitorArquivo/LeitorArquivo.c.s
-.PHONY : services/leitorArquivo/LeitorArquivo.s
-
-# target to generate assembly for a file
-services/leitorArquivo/LeitorArquivo.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Arvore_Geradora_Minima.dir\build.make CMakeFiles/Arvore_Geradora_Minima.dir/services/leitorArquivo/LeitorArquivo.c.s
-.PHONY : services/leitorArquivo/LeitorArquivo.c.s
-
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -266,12 +290,15 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... services/Controler.obj
+	@echo ... services/Controler.i
+	@echo ... services/Controler.s
+	@echo ... services/controleEntradaSaida/ControleArquivo.obj
+	@echo ... services/controleEntradaSaida/ControleArquivo.i
+	@echo ... services/controleEntradaSaida/ControleArquivo.s
 	@echo ... services/geradorArquivo/GeradorArquivo.obj
 	@echo ... services/geradorArquivo/GeradorArquivo.i
 	@echo ... services/geradorArquivo/GeradorArquivo.s
-	@echo ... services/leitorArquivo/LeitorArquivo.obj
-	@echo ... services/leitorArquivo/LeitorArquivo.i
-	@echo ... services/leitorArquivo/LeitorArquivo.s
 .PHONY : help
 
 

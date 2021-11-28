@@ -6,28 +6,29 @@
 
 void menu(cidade **c, int n){
     int res;
+    int cont = 0;
     do{
         printf("\n1 - INSERIR NOVA CIDADE\n");
-        printf("\n2 - MOSTRAR CIDADES CADASTRADAS\n");
-        printf("\n0 - SAIR\n");
+        printf("\n2 - MOSTRAR CIDADES INSERIDAS\n");
         printf("\nOPCAO: ");
         scanf("%d", &res);
 
         switch (res) {
-            case 0:
-                break;
             case 1:
                 insereCidade(c, cidadeInfo(), n);
                 break;
             case 2:
+                cont--;
                 mostrarCidade(c, n);
                 break;
             default:
+                cont--; // Para pessoa digitar a quantidade de cidades passadas
                 printf("\nVALOR INVALIDO\n");
                 break;
         }
+        cont++;
 
-    }while(res != 0);
+    }while(cont < n);
 }
 
 cidade ** newVetorCidade(int n){
@@ -40,36 +41,31 @@ cidade ** newVetorCidade(int n){
 
 cidade * newCidade(){
     cidade * c = malloc(sizeof (cidade));
-    c->cod = 0;
     c->nome = malloc(TAM_NOME * sizeof (char));
     return c;
 }
 
 cidade * cidadeInfo(){
     cidade * c = newCidade();
-    printf("Digite o codigo da cidade: ");
-    scanf("%d", &c->cod);
     printf("Digite o nome da cidade: ");
     scanf("%s", c->nome);
     return c;
 }
 
-cidade ** insereCidade(cidade ** c, cidade * new, int n){
+void insereCidade(cidade ** c, cidade * new, int n){
     int i = 0;
     while(c[i] != NULL && i < n){
         i++;
     }
     if(c[i] == NULL){
         c[i] = new;
-        return c;
     }
-    return NULL;
 }
 
 void mostrarCidade(cidade ** c, int n){
     for (int i = 0; i < n; ++i) {
         if(c[i] != NULL){
-            printf("CODIGO: %d\nNOME: %s\n\n", c[i]->cod, c[i]->nome);
+            printf("CODIGO: %d\nNOME: %s\n\n", i, c[i]->nome);
         }
     }
 }
