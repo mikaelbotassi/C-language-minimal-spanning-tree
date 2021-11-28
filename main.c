@@ -1,4 +1,3 @@
-#define println printf("\n");
 #include "services/Controler.h"
 
 int main() {
@@ -14,10 +13,6 @@ int main() {
     grafo * g = services(&tamEntrada);
 //========================================================
     if(g != NULL){
-        /*mostrarCidade(g->cidades, tamEntrada);
-        mostraMatriz(g->matrizAdj, tamEntrada, "MATRIZ ADJACENTE");
-        println;
-        mostraMatriz(g->AGM, tamEntrada, "ARVORE GERADORA MINIMA");*/
         writeGrafoOnFile(g, tamEntrada);
     }
 
