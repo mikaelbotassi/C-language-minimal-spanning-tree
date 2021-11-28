@@ -31,7 +31,7 @@ float ** newMatriz(int n){
     for (int i = 0; i < n; ++i) {
         new[i] = malloc(n * sizeof (float));
         for(int j = 0; j < n; j++){
-            new[i][j] = -1; // -1 significa que a esta posição não foi atribuído nenhum valor
+            new[i][j] = 0; //Inicia todas as posições com 0
         }
     }
     return new;
@@ -49,7 +49,7 @@ void preenCheMatriz(float **matriz, int n, int type){
                 matriz[i][j] = 0;
             }
             else{
-                if(matriz[j][i] != -1){
+                if(i > j){
                     printf("%.1f ", matriz[j][i]);
                     matriz[i][j] = matriz[j][i];
                 }
@@ -112,12 +112,5 @@ void prim(grafo * g, int n){
         }
         g->AGM[origem][destino] = g->AGM[destino][origem] = dist;
         g->visitados[destino] = 1;
-    }
-    for (int i = 0; i < n; ++i) {
-        for (int j = 0; j < n; ++j) {
-            if((g->AGM[i][j] == -1)  || (g->AGM[i][j] == MAIOR)){
-                g->AGM[i][j] = 0;
-            }
-        }
     }
 }

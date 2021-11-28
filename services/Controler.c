@@ -2,6 +2,8 @@
 // Created by mikae on 27/11/2021.
 //
 
+#define MESSAGE_AGM "\n\t> Calculando Arvore Geradora Minima...\n"
+
 #include "Controler.h"
 
 grafo * services(int * tamEntrada){
@@ -29,6 +31,7 @@ grafo * services(int * tamEntrada){
             g = readGrafoFromFile(tamEntrada);
             g->visitados[0] = 1; //Começarei a percorrer os vértices pelo vértice 0;
             // Para isso eu atribuo 1 para ele como um visitado
+            printf(MESSAGE_AGM);
             prim(g, *tamEntrada);
             break;
 

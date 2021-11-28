@@ -3,7 +3,8 @@
 //
 
 #include "GeradorArquivo.h"
-#define QTD_CID 9
+#define QTD_CID 5
+#define MESSAGE_GERANDO_ARQUIVO "\n\tAVISO: Gerando arquivo de entrada, por favor aguarde...\n"
 #define DIRETORIO_ARQUIVO "../entradas/entrada.txt"
 
 //============= FUNÇÕES PRIVADOS =========================
@@ -30,6 +31,8 @@ void criaArquivo(){
 
     cidade cid;
     int i;
+
+    printf(MESSAGE_GERANDO_ARQUIVO);
 
     FILE *arq_entrada;
     arq_entrada = fopen(DIRETORIO_ARQUIVO, "w");

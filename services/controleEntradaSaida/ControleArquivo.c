@@ -7,6 +7,9 @@
 #define ERRO_CRIAR_ARQUIVO "\n\tERRO: Erro ao criar o arquivo!\n"
 
 #define MENSSAGE_LENDO_ARQUIVO "\n\tAVISO: Lendo arquivo, por favor aguarde...\n"
+#define MESSAGE_CIDADES "\n\t> Armazenando Cidades...\n"
+#define MESSAGE_DISTANCIAS "\n\t> Armazenando Distancias...\n"
+#define MESSAGE_ESCREVENDO_ARQUIVO "\n\tAVISO: Escrevendo arquivo de saida, por favor aguarde...\n"
 #define DIRETORIO_ARQUIVO_ENTRADA "../entradas/entrada.txt"
 #define DIRETORIO_ARQUIVO_SAIDA "../saida/"
 #define LINE_MAX_LENGTH 255
@@ -68,6 +71,7 @@ grafo * readGrafoFromFile(int * tamEntrada)
     printf(MENSSAGE_LENDO_ARQUIVO);
     fscanf(fp, "%d", &registros);
     grafo * fork = newGrafo(registros);
+    printf(MESSAGE_CIDADES);
     while (!feof(fp) && contador < registros)
     {
         cidade * c = readNextCity(fp);
@@ -75,6 +79,7 @@ grafo * readGrafoFromFile(int * tamEntrada)
         contador++;
     }
     contador = 0;
+    printf(MESSAGE_DISTANCIAS);
     while (!feof(fp) && contador < registros)
     {
         readDist(fp, registros, fork->matrizAdj[contador]);
@@ -90,6 +95,7 @@ void writeGrafoOnFile(grafo * fork, int quantCidades) {
     //Cada linha desse arquivo deve apresentar o código da cidade de origem, o nome
     //da cidade de origem, o código da cidade de destino, o nome da cidade de
     //destino e a distância da estrada, tudo separado por vírgulas.
+    printf(MESSAGE_ESCREVENDO_ARQUIVO);
     int nomeArquivoSaidaLength = strlen(DIRETORIO_ARQUIVO_SAIDA) + FILE_NAME_MAX_LENGTH + 1;
     char *nomeArquivoSaida = (char *) malloc(nomeArquivoSaidaLength * sizeof(char));
     FILE *fp;
