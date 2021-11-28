@@ -3,7 +3,7 @@
 //
 
 #include "geradorArquivo/GeradorArquivo.h"
-#include "controleEntradaSaida/HeaderUtils/ControleArquivo.h"
+#include "controleEntradaSaida/ControleArquivo.h"
 
 #ifndef ARVORE_GERADORA_MINIMA_CONTROLER_H
 #define ARVORE_GERADORA_MINIMA_CONTROLER_H

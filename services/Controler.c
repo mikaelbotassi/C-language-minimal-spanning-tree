@@ -44,7 +44,7 @@ grafo * services(int * tamEntrada){
         case 3:
             printf("DIGITE QUANTAS CIDADES HA NO TOTAL: ");
 
-            scanf("%d", &tamEntrada);
+            scanf("%d", tamEntrada);
 
             g = newGrafo(*tamEntrada);
 

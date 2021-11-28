@@ -1,4 +1,4 @@
-#include "HeaderUtils/ControleArquivo.h"
+#include "ControleArquivo.h"
 
 // =-=-=-=-= CONSTANTES =-=-=-=-=
 
@@ -42,7 +42,7 @@ cidade * readNextCity(FILE *fp) {
     char *ptr;
 
     fscanf(fp, " %[^\n]%*c", line);
-    ptr = strtok(line, DELIMITER);
+    strtok(line, DELIMITER);
 
     ptr = strtok(NULL, DELIMITER);
     strcpy(c->nome, ptr);
@@ -86,7 +86,10 @@ grafo * readGrafoFromFile(int * tamEntrada)
     return fork;
 }
 
-void writeGrafoOnFile(grafo * fork) {
+void writeGrafoOnFile(grafo * fork, int quantCidades) {
+    //Cada linha desse arquivo deve apresentar o código da cidade de origem, o nome
+    //da cidade de origem, o código da cidade de destino, o nome da cidade de
+    //destino e a distância da estrada, tudo separado por vírgulas.
     int nomeArquivoSaidaLength = strlen(DIRETORIO_ARQUIVO_SAIDA) + FILE_NAME_MAX_LENGTH + 1;
     char *nomeArquivoSaida = (char *) malloc(nomeArquivoSaidaLength * sizeof(char));
     FILE *fp;
@@ -96,7 +99,21 @@ void writeGrafoOnFile(grafo * fork) {
         return;
     }
 
-    sprintf(nomeArquivoSaida, "%ssaida-%s.txt", DIRETORIO_ARQUIVO_SAIDA, "PreOrder");
+    sprintf(nomeArquivoSaida, "%sviasAsfaltadas.txt", DIRETORIO_ARQUIVO_SAIDA);
     fp = fopen(nomeArquivoSaida, "w");
+    float distTotal = 0; // Variavel para guardar a distância total asfaltada
+    for (int i = 0; i < quantCidades; ++i) {
+        for(int j = 0; j < quantCidades; j++){
+            float distancia = fork->AGM[i][j];
+            if(distancia != 0 && i < j){ //Se a estrada estiver asfaltada(ou seja Distancia != 0) e
+                //a distância entre uma cidade e outra ainda nao estiver escrita(ou seja I < j)
+                distTotal += distancia;
+                fprintf(fp, "ORIGEM:[%d, %s], DESTINO:[%d, %s], DISTANCIA: %.2f\n",
+                        i, fork->cidades[i]->nome, j, fork->cidades[j]->nome, distancia);
+            }
+        }
+    }
+    fprintf(fp, "DISTANCIA TOTAL ASFALTADA = %.2f", distTotal);
+
     fclose(fp);
 }

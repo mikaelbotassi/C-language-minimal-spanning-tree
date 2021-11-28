@@ -13,20 +13,20 @@ CMakeFiles/Arvore_Geradora_Minima.dir/main.c.obj: \
  ../lib/grafo/Grafo.h \
  ../main.c \
  ../services/Controler.h \
- ../services/controleEntradaSaida/HeaderUtils/ControleArquivo.h \
+ ../services/controleEntradaSaida/ControleArquivo.h \
  ../services/geradorArquivo/GeradorArquivo.h
 CMakeFiles/Arvore_Geradora_Minima.dir/services/Controler.c.obj: \
  ../lib/cidade/Cidade.h \
  ../lib/grafo/Grafo.h \
  ../services/Controler.c \
  ../services/Controler.h \
- ../services/controleEntradaSaida/HeaderUtils/ControleArquivo.h \
+ ../services/controleEntradaSaida/ControleArquivo.h \
  ../services/geradorArquivo/GeradorArquivo.h
 CMakeFiles/Arvore_Geradora_Minima.dir/services/controleEntradaSaida/ControleArquivo.c.obj: \
  ../lib/cidade/Cidade.h \
  ../lib/grafo/Grafo.h \
  ../services/controleEntradaSaida/ControleArquivo.c \
- ../services/controleEntradaSaida/HeaderUtils/ControleArquivo.h
+ ../services/controleEntradaSaida/ControleArquivo.h
 CMakeFiles/Arvore_Geradora_Minima.dir/services/geradorArquivo/GeradorArquivo.c.obj: \
  ../lib/cidade/Cidade.h \
  ../lib/grafo/Grafo.h \

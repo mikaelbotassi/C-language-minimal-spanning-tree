@@ -3,7 +3,7 @@
 //
 
 #include "GeradorArquivo.h"
-#define QTD_CID 9
+#define QTD_CID 100
 #define DIRETORIO_ARQUIVO "../entradas/entrada.txt"
 
 //============= FUNÇÕES PRIVADOS =========================
